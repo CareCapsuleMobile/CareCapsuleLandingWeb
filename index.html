@@ -4,17 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
+    :root {
+      --purple: #4b0082; /* Dark purple */
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
     header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #24292e;
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: sans-serif, sans-serif;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: white;
+      color: var(--purple);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+      border-bottom: 1px solid #eee;
     }
 
     .logo-section {
@@ -24,14 +33,21 @@
     }
 
     .logo-section img {
-      height: 40px;
-      width: 40px;
+      height: 36px;
+      width: 36px;
+      border-radius: 50%;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: 600;
     }
 
     header a {
-      color: #58a6ff;
+      color: var(--purple);
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
     }
 
     header a:hover {
