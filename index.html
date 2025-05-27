@@ -30,22 +30,23 @@
       align-items: center;
       justify-content: space-between;
     }
-.header img {
-  	height: 140px;
-	  width: auto;
-  	object-fit: contain;
-	}
+.header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+    .header-inner img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+    }
     nav a {
       margin: 0 1rem;
       color: #2b004f;
       text-decoration: none;
       font-weight: 600;
     }
-	.logo-section img {
-		height: 36px;
-      width: 36px;
-      border-radius: 50%;
-	}
     .main-content {
       padding: 2rem;
     }
@@ -105,8 +106,8 @@
   </style>
 </head>
 <body>
-  <header class="header">
-	 <div class="logo-section">
+ <header class="header">
+    <div class="header-inner">
 <img src="Carrie.png" alt="App logo">
     <h1 style="margin: 0; font-size: 1.5rem;">CareCapsule Mobile Ltd.</h1>
 </div>
