@@ -1,77 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Example App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --purple: #4b0082;
-    }
-
     body {
+      font-family: 'Outfit', sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 0;
+      background: linear-gradient(135deg, rgb(255, 221, 173), rgb(232, 228, 255, 1));
+      color: #2b004f;
     }
-
-    header {
+    .header {
+      background-color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-align: center;
+      border: 3px solid rbg(18, 9, 67, 1);
+      border-radius: 25px;
+      margin: 1rem;
+      color: #2b004f;
       position: sticky;
       top: 0;
       z-index: 1000;
-      background-color: white;
-      color: var(--purple);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.5rem 1rem;
-      border-bottom: 1px solid #eee;
     }
-
-    .logo-section {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .logo-section img {
-      height: 36px;
-      width: 36px;
-      border-radius: 50%;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.3rem;
+    nav a {
+      margin: 0 1rem;
+      color: #2b004f;
+      text-decoration: none;
       font-weight: 600;
     }
-
-    header a {
-      color: var(--purple);
-      text-decoration: none;
-      font-weight: 500;
+    .main-content {
+      padding: 2rem;
     }
-
-    header a:hover {
-      text-decoration: underline;
+    .cta-button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #ff7f50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+    .feature-section {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      flex-wrap: wrap;
+    }
+    .feature-section img {
+      flex: 1 1 200px;
+      max-width: 100%;
+      border-radius: 12px;
+    }
+    .feature-section div {
+      flex: 2 1 300px;
+    }
+    .footer {
+      background-color: #f4e1ff;
+      border-top: 3px solid rbg(18, 9, 67, 1);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      color: #2b004f;
+    }
+    }
+    @media (max-width: 768px) {
+      .feature-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .feature-section img,
+      .feature-section div {
+        flex: none;
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
+  <header class="header">
+<img src="Carrie.png" alt="Logo">
+    <h1>CareCapsule Mobile Ltd.</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </header>
 
-<header>
-  <div class="logo-section">
-    <img src="Carrie.png" alt="Logo">
-    <h1 style="margin: 0; font-size: 1.5rem;">CareCapsule Mobile Ltd.</h1>
-  </div>
-  <a href="https://landing.carecapsule.ca" target="_blank">Landing Page</a>
-</header>
-</head>
-<body style="font-family:sans-serif; background: linear-gradient(135deg, rgb(255, 221, 173), rgb(232, 228, 255, 1)); color: rbg(18, 9, 67, 1); justify-content:center; align-items:center; height:100vh; text-align:center; margin-top:1em;">
-  <h1>Welcome to Care Capsule, an assistant app!</h1>
-  <br>
-  <img src="Carrie.png" alt="Logo" style="width:200px;" />
-  <br>
-  <p style="font-size: 1.2em;">iOS App coming to app store soon. <br>Stay tuned!</p>
-  <br>
-  <p><a href="mailto:elena.galluzzo@carecapsule.ca">Contact Us!</a></p>
+  <main class="main-content">
+    <section>
+      <h2>Welcome to Care Capsule, an assistant app!</h2>
+      <p>Care Capsule can help you sort your medication schedules, set up task and event reminders, create day logs and memory albums, and can help you organize contacts and provides support resources catered for older adults.—anytime, anywhere.</p>
+	<br>
+	  <p style="font-size: 1.2em;">iOS App coming to app store soon. <br>Stay tuned!</p>
+  	<br>
+    </section>
+
+    <section id="features">
+      <h2>Features</h2>
+
+      <div class="feature-section">
+        <img src=“assistantLanding.png" alt="Assistant”>
+        <div>
+          <h3>Personalized assistant, companion, and organizer in your pocket!</h3>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="feature-section">
+        <img src=“RemindersLanding.png" alt=“Remindersl>
+        <div>
+          <h3>Smart Scheduling</h3>
+          <p>Set up your reminders and medication schedules through ai driven chat or manual set ups.</p>
+        </div>
+      </div>
+
+      <div class="feature-section">
+        <img src="personalLanding.png" alt=“Personal”>
+        <div>
+          <h3>Custom Themes</h3>
+          <p>Make the app yours with personalized memory albums, day logs, and familiar contacts.</p>
+        </div>
+      </div>
+
+	<div class="feature-section">
+        <img src=“supportLanding.png" alt="Support”>
+        <div>
+          <h3>Support and Companionship</h3>
+          <p>Access public support resources and use chat for basic companionship.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; Care Capsule Mobile Ltd.</p>
+  </footer>
+</body>
+</html>
+
+  
 </body>
 </html>
